@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs') %>
+        <title>Goals</title>
+    </head>
+
+    <body>
+        <%- include("../partials/header") %>
+        <!-- *********DISPLAY OUR GOALS********* -->
+        <h1 class="title">Goals</h1>
+        <a class="btn" href="/users/logout">Logout</a>
+        <% for (goal of goals) { %>
+        <h2 class="subtitle is-3"><%= goal.text %></h2>
+        <% } %>
+        <!-- **********NEW GOALS FORM**************** -->
+        <form action="/goals/" method="post">
+            <input type="text" placeholder="new goal" name="text" />
+            <input type="submit" value="add goal" />
+        </form>
+        <%- include("../partials/footer") %>
+    </body>
+</html>

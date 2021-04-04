@@ -1,12 +1,7 @@
 //! create our new router
 const router = require('express').Router();
-const {
-    getCreate,
-    createSubmit,
-    getLogin,
-    loginSubmit,
-    logout,
-} = require('../controllers/users');
+const { index, newGoal } = require('../controllers/goals');
+const { isAuthenticated } = require('../utils/auth');
 
 ///////////////////////////////
 //! Router Specific Middleware
@@ -16,21 +11,15 @@ const {
 //! Router Specific Routes
 ////////////////////////////////
 
-//* CREATE PAGE
-router.get('/create', getCreate);
+//* SHOW ALL GOALS
+router.get('/', isAuthenticated, index);
 
-//* CREATE SUBMIT
-router.post('/create', createSubmit);
+router.post('/', isAuthenticated, newGoal);
 
-//* LOGIN PAGE
-router.get('/login', getLogin);
-
-//* LOGIN SUBMIT
-router.post('/login', loginSubmit);
-
-//* LOGOUT
-router.get('/logout', logout);
-
+//! CATCHALL
+router.get('/*', (req, res) => {
+    res.redirect('/goals');
+});
 ////////////////////////////////
 //! Export the Router
 ////////////////////////////////

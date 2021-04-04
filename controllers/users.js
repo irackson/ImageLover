@@ -29,8 +29,7 @@ async function usernameFree(attempt) {
 }
 
 const createSubmit = async (req, res) => {
-    //TODO: DEAL WITH TAKEN USERNAME (MUST BE  UNIQUE)
-
+    //*DEAL WITH TAKEN USERNAME (MUST BE  UNIQUE)
     if (await usernameFree(req.body.username)) {
         if (req.body.admin === 'on') {
             if (req.body.admin_code.toLowerCase() === adminCode.toLowerCase()) {
@@ -75,7 +74,7 @@ const loginSubmit = async (req, res) => {
             if (result) {
                 req.session.user = user.username;
                 req.session.admin = user.admin;
-                res.redirect('/');
+                res.redirect('/goals');
             } else {
                 res.status(400).json({ error: 'Password is wrong' });
             }

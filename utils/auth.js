@@ -8,7 +8,7 @@ const isAuthenticated = (req, res, next) => {
     }
 };
 
-const isAuthorized = (req, res, next) => {
+/* const isAuthorized = (req, res, next) => {
     if (req.session.admin === true) {
         next();
     } else {
@@ -16,9 +16,8 @@ const isAuthorized = (req, res, next) => {
             message: 'You must have admin status to see this page.',
         });
     }
-};
+}; */
 
 module.exports = {
     isAuthenticated,
-    isAuthorized,
 };
