@@ -1,12 +1,10 @@
 {
-    "name": "express-supreme",
+    "name": "image-lover-unit2-repo",
     "version": "1.0.0",
     "description": "boilerplate with auth, express, mongoose and sass",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "compile:sass": "sass sass/main.scss public/styles/style.css",
-        "watch:sass": "sass --watch sass/main.scss:public/styles/style.css",
         "dev": "nodemon server.js",
         "seed": "node db/seed.js"
     },

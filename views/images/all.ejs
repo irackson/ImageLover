@@ -8,14 +8,14 @@
     <body>
         <%- include("../partials/header") %>
         <!-- *********DISPLAY OUR IMAGES********* -->
-        <h1 class="title">Images</h1>
-        <a class="btn" href="/users/logout">Logout</a>
+        <h1 class="">Images</h1>
+        <a class="" href="/users/logout">Logout</a>
         <% for (image of images) { %>
-        <h2 class="subtitle is-3"><%= image.text %></h2>
+        <img src="<%= image.url %>" alt="" />
         <% } %>
         <!-- **********NEW IMAGES FORM**************** -->
         <form action="/images/" method="post">
-            <input type="text" placeholder="new image" name="text" />
+            <input type="text" placeholder="new image" name="url" />
             <input type="submit" value="add image" />
         </form>
         <%- include("../partials/footer") %>
