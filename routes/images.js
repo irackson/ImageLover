@@ -1,6 +1,6 @@
 //! create our new router
 const router = require('express').Router();
-const { index, newGoal } = require('../controllers/goals');
+const { index, newImage } = require('../controllers/images');
 const { isAuthenticated } = require('../utils/auth');
 
 ///////////////////////////////
@@ -11,14 +11,14 @@ const { isAuthenticated } = require('../utils/auth');
 //! Router Specific Routes
 ////////////////////////////////
 
-//* SHOW ALL GOALS
+//* SHOW ALL IMAGES
 router.get('/', isAuthenticated, index);
 
-router.post('/', isAuthenticated, newGoal);
+router.post('/', isAuthenticated, newImage);
 
 //! CATCHALL
 router.get('/*', (req, res) => {
-    res.redirect('/goals');
+    res.redirect('/images');
 });
 ////////////////////////////////
 //! Export the Router

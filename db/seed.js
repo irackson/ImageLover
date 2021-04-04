@@ -13,7 +13,7 @@ const User = require('../models/User');
 const seed = async () => {
     //--- CODE GOES HERE
     //clear collections before seeding
-    // await User.deleteMany({}); // to clear accounts
+    await User.deleteMany({}); // to clear accounts
     //--------------------
 };
 

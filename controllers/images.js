@@ -10,19 +10,19 @@ const User = require('../models/User');
 
 const index = async (req, res) => {
     const user = await User.findOne({ username: req.session.user });
-    res.render('goals/all', {
-        goals: user.goals,
+    res.render('images/all', {
+        images: user.images,
     });
 };
 
-const newGoal = async (req, res) => {
+const newImage = async (req, res) => {
     // fetch up to date user
     const user = await User.findOne({ username: req.session.user });
-    // push the goal into the user
-    user.goals.push(req.body);
+    // push the image into the user
+    user.images.push(req.body);
     await user.save();
-    // redirect back to goals
-    res.redirect('/goals');
+    // redirect back to images
+    res.redirect('/images');
 };
 
 //////////////////////////////
@@ -30,5 +30,5 @@ const newGoal = async (req, res) => {
 //////////////////////////////
 module.exports = {
     index,
-    newGoal,
+    newImage,
 };

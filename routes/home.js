@@ -1,14 +1,14 @@
 //! import router
 const router = require('express').Router();
 const UsersRouter = require('./users');
-const GoalsRouter = require('./goals');
+const ImagesRouter = require('./images');
 
 ///////////////////////////////
 //! Router Specific Middleware
 ////////////////////////////////
 
 router.use('/users', UsersRouter);
-router.use('/goals', GoalsRouter);
+router.use('/images', ImagesRouter);
 
 ////////////////////////////////
 //! Router Specific Routes

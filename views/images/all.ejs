@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include('../partials/head.ejs') %>
+        <title>Images</title>
+    </head>
+
+    <body>
+        <%- include("../partials/header") %>
+        <!-- *********DISPLAY OUR IMAGES********* -->
+        <h1 class="title">Images</h1>
+        <a class="btn" href="/users/logout">Logout</a>
+        <% for (image of images) { %>
+        <h2 class="subtitle is-3"><%= image.text %></h2>
+        <% } %>
+        <!-- **********NEW IMAGES FORM**************** -->
+        <form action="/images/" method="post">
+            <input type="text" placeholder="new image" name="text" />
+            <input type="submit" value="add image" />
+        </form>
+        <%- include("../partials/footer") %>
+    </body>
+</html>
