@@ -6,6 +6,7 @@
         <title>User Login</title>
     </head>
     <body>
+        <%- include("../partials/header") %>
         <main class="users-login">
             <h2>Login Below!</h2>
             <form action="/users/login" method="POST">
@@ -35,7 +36,7 @@
                 </ul>
             </form>
         </main>
-
+        <%- include("../partials/footer") %>
         <!-- load script at end of body -->
         <script src="/all.js"></script>
     </body>

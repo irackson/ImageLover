@@ -2,12 +2,26 @@
 <html lang="en">
     <head>
         <%- include('./partials/head.ejs') %>
-
         <title>Home</title>
     </head>
+
     <body>
-        <main class="home"></main>
-        <h1>Hello World!</h1>
+        <%- include("./partials/header") %>
+        <main>
+            <nav>
+                <ul>
+                    <li>
+                        <% if (loggedIn) { %>
+                        <a class="btn" href="/users/logout">Logout</a>
+                        <% } else { %>
+                        <a class="btn" href="/users/login">Login</a>
+                        <a class="btn" href="/users/create">Sign up</a>
+                        <% } %>
+                    </li>
+                </ul>
+            </nav>
+        </main>
+        <%- include("./partials/footer") %>
         <!-- load script at end of body -->
         <script src="/all.js"></script>
     </body>
