@@ -7,16 +7,29 @@
 
     <body>
         <%- include("../partials/header") %>
-        <!-- *********DISPLAY OUR IMAGES********* -->
-        <h1 class="">Images</h1>
-        <% for (image of images) { %>
-        <img src="<%= image.url %>" alt="" />
-        <% } %>
         <!-- **********NEW IMAGES FORM**************** -->
-        <form action="/images/" method="post">
-            <input type="text" placeholder="new image" name="url" />
-            <input type="submit" value="add image" />
-        </form>
+        <main class="all">
+            <section class="all__form-container">
+                <form action="/images/" method="post">
+                    <input type="text" placeholder="new image" name="url" />
+                    <input type="submit" value="add image" />
+                </form>
+            </section>
+            <!-- *********DISPLAY OUR IMAGES********* -->
+            <section class="card-row">
+                <% for (image of images) { %>
+                <article class="card">
+                    <div
+                        class="card__img"
+                        aria-label="Image Unavailable"
+                        style="<%= `background-image: url('${image.url}')` %>"
+                        onclick="<%= `window.open('${image.url}')` %>"
+                    ></div>
+                </article>
+                <% } %>
+            </section>
+            <%- include("../partials/backTotop") %>
+        </main>
         <%- include("../partials/footer") %>
     </body>
 </html>
