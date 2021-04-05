@@ -2,3 +2,21 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+.header {
+    outline: 2px dashed grey;
+
+    &__info-container {
+        display: flex;
+        justify-content: space-between;
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    &__title-container {
+        text-align: center;
+    }
+}

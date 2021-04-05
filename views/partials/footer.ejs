@@ -1,5 +1,12 @@
-<footer>
-    <h6>footer</h6>
+<footer class="footer">
+    <nav>
+        <% if (loggedIn) { %>
+        <a class="btn" href="/users/logout">Logout</a>
+        <% } else { %>
+        <a class="btn" href="/users/login">Login</a>
+        <a class="btn" href="/users/create">Sign up</a>
+        <% } %>
+    </nav>
     <!-- load script at end of body -->
     <script src="/all.js"></script>
 </footer>

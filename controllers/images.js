@@ -12,6 +12,7 @@ const index = async (req, res) => {
     const user = await User.findOne({ username: req.session.user });
     res.render('images/all', {
         images: user.images,
+        loggedIn: req.session.user,
     });
 };
 

@@ -2,3 +2,17 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+@if ($footerBottomMethod == 'flexbox') {
+    footer {
+        margin-top: auto;
+    }
+}
+
+.footer {
+    nav {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+    }
+}

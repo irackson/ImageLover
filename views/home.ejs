@@ -8,18 +8,11 @@
     <body>
         <%- include("./partials/header") %>
         <main>
-            <nav>
-                <ul>
-                    <li>
-                        <% if (loggedIn) { %>
-                        <a class="btn" href="/users/logout">Logout</a>
-                        <% } else { %>
-                        <a class="btn" href="/users/login">Login</a>
-                        <a class="btn" href="/users/create">Sign up</a>
-                        <% } %>
-                    </li>
-                </ul>
-            </nav>
+            <% if (loggedIn) { %>
+            <h2><a href="/images">Click to View Images!</a></h2>
+            <% } else { %>
+            <h2>Login to view your #belovedImages!</h2>
+            <% } %>
         </main>
         <%- include("./partials/footer") %>
     </body>
