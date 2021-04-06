@@ -4,9 +4,7 @@
 // -----------------------------------------------------------------------------
 
 h1 {
-    color: red;
-}
-
-body {
-    background-color: rgb(170, 65, 135);
+    color: $brand-color;
+    text-align: center;
+    font-weight: 1000;
 }

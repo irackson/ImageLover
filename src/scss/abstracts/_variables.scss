@@ -5,7 +5,8 @@
 //? Options: flexbox | grid
 $footerBottomMethod: grid;
 
-$btnColor: #3e68ff;
+$btnColor: #425ab4;
+$backgroundColor: rgb(240, 132, 150);
 
 /// Regular font family
 /// @type List
@@ -23,7 +24,7 @@ $text-color: rgb(34, 34, 34) !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(229, 0, 80) !default;
+$brand-color: rgb(170, 117, 136) !default;
 
 /// Light grey
 /// @type Color

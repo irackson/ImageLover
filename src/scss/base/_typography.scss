@@ -118,5 +118,5 @@ body {
     // Ensure base applied as default for all other elements
     font-size: $type-base-size;
     line-height: 1.5;
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: $text-font-stack;
 }

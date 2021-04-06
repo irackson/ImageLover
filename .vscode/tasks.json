@@ -10,7 +10,10 @@
                 "panel": "new",
                 "group": "develop"
             },
-            "runOptions": { "runOn": "folderOpen" }
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "problemMatcher": []
         },
         {
             "label": "Run gulp startup",
@@ -21,20 +24,22 @@
                 "panel": "new",
                 "group": "develop"
             },
-            "runOptions": { "runOn": "folderOpen" }
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
         },
         {
             "type": "process",
             "label": "terminal",
-            "command": "/bin/bash", // <-- your shell here
+            "command": "/bin/bash",
             "args": [
-                "-l" // login shell for bash
+                "-l"
             ],
             "problemMatcher": [],
             "presentation": {
-                "echo": false, // silence "Executing task ..."
+                "echo": false,
                 "focus": true,
-                "group": "develop", // some arbitrary name for the group
+                "group": "develop",
                 "panel": "dedicated"
             },
             "runOptions": {
