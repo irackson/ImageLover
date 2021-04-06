@@ -42,8 +42,7 @@
         "terminal.ansiRed": "#CF6A4C",
         "terminal.ansiWhite": "#A7A7A7",
         "terminal.ansiYellow": "#F9EE98",
-        "editorCursor.foreground": "#dddd0fb6",
-        "tab.activeBorder": "#0d4706"
+        "editorCursor.foreground": "#dddd0fb6"
     },
     "files.exclude": {
         "**/.git": true,
@@ -60,7 +59,5 @@
         "Procfile": true
     },
     "explorerExclude.backup": null,
-    "cSpell.words": [
-        "Totop"
-    ]
+    "cSpell.words": ["Totop"]
 }
