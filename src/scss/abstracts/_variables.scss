@@ -6,12 +6,13 @@
 $footerBottomMethod: grid;
 
 $btnColor: #425ab4;
+$inputBorder: #8b8a8b;
 $backgroundColor: rgb(240, 132, 150);
 
 /// Regular font family
 /// @type List
-$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue',
-    'Helvetica', 'Arial', sans-serif !default;
+$text-font-stack: 'Bebas Neue', cursive, 'Open Sans', 'Helvetica Neue Light',
+    'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
 
 /// Code (monospace) font family
 /// @type List
@@ -24,7 +25,7 @@ $text-color: rgb(34, 34, 34) !default;
 
 /// Main brand color
 /// @type Color
-$brand-color: rgb(170, 117, 136) !default;
+$brand-color: rgb(10, 177, 219) !default;
 
 /// Light grey
 /// @type Color

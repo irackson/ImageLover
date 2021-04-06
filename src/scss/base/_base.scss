@@ -4,6 +4,13 @@
 // This file contains very basic styles.
 // -----------------------------------------------------------------------------
 
+:root {
+    --input-border: $inputBorder;
+    --input-focus-h: 245;
+    --input-focus-s: 100%;
+    --input-focus-l: 42%;
+}
+
 /**
  * Set up a decent box model on the root element
  */
