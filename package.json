@@ -30,7 +30,7 @@
         "gulp-dart-sass": "^1.0.2",
         "mercedlogger": "^1.0.1",
         "method-override": "^3.0.0",
-        "mongoose": "^5.12.1",
+        "mongoose": "^8.9.5",
         "morgan": "^1.10.0"
     },
     "devDependencies": {
